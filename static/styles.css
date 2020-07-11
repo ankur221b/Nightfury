@@ -1,0 +1,99 @@
+#navbar-brand {
+    font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+    margin-left: 150px;
+    font-size: xx-large;
+    color: rgb(254, 209, 54);
+}
+
+.navbar.navbar-expand-sm.navbar-dark.bg-dark {
+    height: 120px;
+}
+
+#nav-link {
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: white;
+}
+
+#nav-link:hover {
+    color: #fed136;
+}
+
+.image {
+    background-image: url("https://docs.google.com/uc?export=download&id=1-VUYzLU51gG_utoC6l70P_oE6RGDee4y");
+    height: 85vh;
+    width: 100%;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.reg-image {
+    background-image: url('https://register-1255763977.file.myqcloud.com/pmco_registration/static/img/container-bg.bd4d306.png');
+    background-size: cover: text-align: center;
+    background-repeat: repeat-y;
+}
+
+label {
+    color: white;
+    margin-left: 460px;
+}
+
+#exampleInputEmail1 {
+    width: 40%;
+    margin: auto;
+    background-color: transparent;
+    color: white;
+}
+
+.form-group input {
+
+    width: 40%;
+    margin: auto;
+    background-color: transparent;
+    color: white;
+
+}
+
+form {
+    padding-top: 50px;
+}
+
+.btn.btn-primary {
+    margin-left: 460px;
+}
+
+.pname {
+
+    color: white;
+    font-size: 50px;
+}
+
+.pdetail {
+    color: white;
+    font-size: 25px;
+    font-family: 'Caladea', serif;
+}
+
+.content {
+    width: 40%;
+    margin: auto;
+}
+
+hr {
+    background-color: grey;
+}
+
+#icon {
+    margin-left: 40px;
+}
+
+.profileimg {
+    height: 250px;
+    width: 250px;
+    float: right;
+    margin-top: 150px;
+    background-size: cover;
+    border-radius: 125px;
+
+}

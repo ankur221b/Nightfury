@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Team</title>
+  <link rel="stylesheet" href='{% static "styles.css" %}'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+  crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+  <link href="https://fonts.googleapis.com/css2?family=Caladea&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/8327b10ac1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <a  style="" href="#" class="navbar-brand" id="navbar-brand">Nightfury</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul style="margin-right: 200px;" class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="https://nightfury-pubg.herokuapp.com/" class="nav-link" id="nav-link">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/register/" class="nav-link" id="nav-link">REGISTER</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/team/" class="nav-link" id="nav-link">TEAM</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://ankur221b.github.io/" target="_blank" class="nav-link" id="nav-link">ABOUT</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="reg-image">
+
+        <div class="content">
+            {% for player in team %}
+
+
+            <div style="background-image: url({{player.imageurl}});" class="profileimg">
+
+            </div>
+
+            <img src="{{ player.avatar.url }}">
+
+            <strong><p class="pname">{{player.name}}</p></strong>
+
+            <p class="pdetail">{{player.email}} <i onclick="copy(this.parentElement)" class="far fa-copy" id="icon"></i></p>
+
+            <p style="color: white; font-weight: 700;"> Character Id</p>
+
+            <p class="pdetail">{{player.char_id}} <i onclick="copy(this.parentElement)" class="far fa-copy" id="icon"></i></p>
+
+            <p style="color: white; font-weight: 700;"> IGN </p>
+
+            <p class="pdetail">{{player.in_game}} <i onclick="copy(this.parentElement)" class="far fa-copy" id="icon"></i> </p>
+
+            <p style="color: white; font-weight: 700;"> Aadhaar Number </p>
+
+            <p class="pdetail">{{player.aadhaar}} <i onclick="copy(this.parentElement)" class="far fa-copy" id="icon"></i> </p>
+
+
+            <hr>
+            {% endfor %}
+        </div>
+
+        <div style="height: 150px;">
+
+        </div>
+
+        <script>
+            function copy(x){
+
+                let text = x.innerText;
+
+                console.log(text);
+
+                navigator.clipboard.writeText(text);
+
+            }
+        </script>
+
+
+
+    </div>
+
+</body>
+</html>
