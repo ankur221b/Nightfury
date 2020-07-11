@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '@4mciqqhez#h*gf(*x-536*$mv!(sqi@irr1=ofdw(ho9*_1js'
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -133,8 +133,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 cloudinary.config(
   cloud_name = 'ankur221b',
-  api_key = '743581856661484',
-  api_secret = 'yeKKfqvsddtX-Blc_7Z7A_p11no',
+  api_key = os.environ['api_key'],
+  api_secret = os.environ['api_secret'],
   secure = True
 )
 
