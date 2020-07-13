@@ -82,7 +82,7 @@ DATABASES = {
         'ENGINE': 'djongo',
         'NAME': 'nightfurydb',
         'CLIENT':{
-            'host':'mongodb://ank:ank@nightfurydb-shard-00-00.b8o0q.mongodb.net:27017,nightfurydb-shard-00-01.b8o0q.mongodb.net:27017,nightfurydb-shard-00-02.b8o0q.mongodb.net:27017/nightfurydb?ssl=true&replicaSet=atlas-eav29w-shard-0&authSource=admin&retryWrites=true&w=majority'
+            'host':os.environ['URI']
         }
     }
 }
