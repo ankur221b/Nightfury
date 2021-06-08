@@ -19,7 +19,7 @@ ecdsa==0.15
 gunicorn==20.0.4
 idna==2.9
 oauthlib==3.1.0
-Pillow==7.1.2
+Pillow==8.2.0
 pyasn1==0.4.8
 pycodestyle==2.6.0
 pycparser==2.20
